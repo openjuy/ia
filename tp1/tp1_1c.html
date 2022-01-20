@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Generator" content="Kate, the KDE Advanced Text Editor" />
+<title>tp1_1c.m</title>
+</head>
+<!-- Highlighting: "Matlab" -->
+<body>
+<pre style='color:#1f1c1b;background-color:#ffffff;'>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% TRABAJO CON MATRICES</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% Matriz de 15 x 1 de números aleatorios enteros de dos dígitos. Determinar</span>
+<span style='color:#898887;'>% la posición y valor del menor y del mayor.</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% max</span>
+<span style='color:#898887;'>% Elementos máximos de un array</span>
+<span style='color:#898887;'>% M = max(A) devuelve los elementos máximos de un array.</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% [M,I] = max(___) encuentra los índices de los valores máximos de A y los</span>
+<span style='color:#898887;'>% devuelve en el vector de salida I, utilizando cualquiera de los</span>
+<span style='color:#898887;'>% argumentos de entrada de las sintaxis anteriores. Si el valor máximo se</span>
+<span style='color:#898887;'>% produce más de una vez, max devuelve el índice correspondiente a la</span>
+<span style='color:#898887;'>% primera aparición.</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+
+<span style='color:#0057ae;'>clear</span>; <span style='color:#0057ae;'>clc</span>;
+<span style='color:#898887;'>% </span>
+<span style='color:#0057ae;'>A</span> = <span style='color:#0057ae;'>randi</span>([<span style='color:#b08000;'>0</span>,<span style='color:#b08000;'>99</span>],<span style='color:#b08000;'>15</span>,<span style='color:#b08000;'>1</span>)
+<span style='color:#898887;'>% Aqui calculo el maximo y su posicion.</span>
+[<span style='color:#0057ae;'>max</span>, <span style='color:#0057ae;'>posMax</span>] = <span style='color:#0057ae;'>max</span> (<span style='color:#0057ae;'>A</span>)
+<span style='color:#898887;'>% Aqui calculo en minimo y su posicion.</span>
+[<span style='color:#0057ae;'>min</span>, <span style='color:#0057ae;'>posMin</span>] = <span style='color:#0057ae;'>min</span> (<span style='color:#0057ae;'>A</span>)
+</pre>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Generator" content="Kate, the KDE Advanced Text Editor" />
+<title>tp1_1a.m</title>
+</head>
+<!-- Highlighting: "Matlab" -->
+<body>
+<pre style='color:#1f1c1b;background-color:#ffffff;'>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% TRABAJO CON MATRICES</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% Generar matrices con las caracteristicas que se indican.</span>
+<span style='color:#898887;'>% Matrizde 6x7 de valores aleatorios enteros. Las primeras tres columnas</span>
+<span style='color:#898887;'>% impares en el intervalo(0,1), las restantes en elintervalo(-1,1).</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% Enteros aleatorios</span>
+<span style='color:#898887;'>% Utilice la función randi (en lugar de rand) para generar 5 enteros</span>
+<span style='color:#898887;'>% aleatorios a partir de la distribución uniforme entre 10 y 50.</span>
+<span style='color:#898887;'>% r = randi([10 50],1,5)</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+
+<span style='color:#0057ae;'>clear</span>; <span style='color:#0057ae;'>clc</span>;
+<span style='color:#0057ae;'>A</span> = <span style='color:#0057ae;'>randi</span>([<span style='color:#b08000;'>0</span>,<span style='color:#b08000;'>1</span>],<span style='color:#b08000;'>6</span>,<span style='color:#b08000;'>3</span>);
+<span style='color:#0057ae;'>B</span> = <span style='color:#0057ae;'>randi</span>([-<span style='color:#b08000;'>1</span>,<span style='color:#b08000;'>1</span>],<span style='color:#b08000;'>6</span>,<span style='color:#b08000;'>4</span>);
+
+<span style='color:#898887;'>%Concatenar matrices</span>
+<span style='color:#898887;'>%Concatenar columnas </span>
+<span style='color:#898887;'>% C = [A B]</span>
+<span style='color:#898887;'>%Concatenar filas</span>
+<span style='color:#898887;'>% C = [A ; B]</span>
+
+<span style='color:#0057ae;'>C</span> = [<span style='color:#0057ae;'>A</span> <span style='color:#0057ae;'>B</span>]</pre>
+</body>
+</html>

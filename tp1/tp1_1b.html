@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Generator" content="Kate, the KDE Advanced Text Editor" />
+<title>tp1_1b.m</title>
+</head>
+<!-- Highlighting: "Matlab" -->
+<body>
+<pre style='color:#1f1c1b;background-color:#ffffff;'>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% TRABAJO CON MATRICES</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% Generar matrices con las caracteristicas que se indican.</span>
+<span style='color:#898887;'>% Matriz A de 20x25 de valores enteros positivos. Extraer una matriz</span>
+<span style='color:#898887;'>% A1(3x8) desde la posición (5,5). Matriz A2 que resulte de la eliminación</span>
+<span style='color:#898887;'>% de las columnas 11 a 14 y las filas 9 a 13 de A.</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% Cuando desee acceder a una selección de elementos de un arreglo, utilice</span>
+<span style='color:#898887;'>% la indexación.</span>
+<span style='color:#898887;'>% Para referirse a varios elementos de un arreglo, use el operador de dos</span>
+<span style='color:#898887;'>% puntos, que le permite especificar un rango de la forma start:end</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% Eliminar filas o columnas de una matriz</span>
+<span style='color:#898887;'>% La manera más sencilla de eliminar una fila o una columna de una matriz</span>
+<span style='color:#898887;'>% es igualar dicha fila o columna a un par de corchetes vacíos [].</span>
+
+<span style='color:#0057ae;'>clear</span>; <span style='color:#0057ae;'>clc</span>;
+<span style='color:#898887;'>% Con rand obtengo valores aleatorios decimales entre 0 y 1, ej 0.0635</span>
+<span style='color:#898887;'>% Con round obtengo valores enteros redondeados</span>
+<span style='color:#898887;'>% Genero la matriz A de 20x25 con valores enteros positivos.</span>
+<span style='color:#0057ae;'>A</span> = <span style='color:#0057ae;'>round</span>(<span style='color:#b08000;'>10</span>*(<span style='color:#0057ae;'>rand</span>(<span style='color:#b08000;'>20</span>,<span style='color:#b08000;'>25</span>)));
+<span style='color:#898887;'>% Extraigo la matriz A1 de 3x8 desde la posicion (5,5).</span>
+<span style='color:#0057ae;'>A1</span> = <span style='color:#0057ae;'>A</span>(<span style='color:#b08000;'>5</span>:<span style='color:#b08000;'>7</span>,<span style='color:#b08000;'>5</span>:<span style='color:#b08000;'>12</span>)
+<span style='color:#898887;'>% Primero elimino las columnas.</span>
+<span style='color:#0057ae;'>A</span>(:,<span style='color:#b08000;'>11</span>:<span style='color:#b08000;'>14</span>) = [];
+<span style='color:#898887;'>% Luego elimino las filas</span>
+<span style='color:#0057ae;'>A</span>(<span style='color:#b08000;'>9</span>:<span style='color:#b08000;'>13</span>,:) = []</pre>
+</body>
+</html>

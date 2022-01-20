@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Generator" content="Kate, the KDE Advanced Text Editor" />
+<title>tp1_2a.m</title>
+</head>
+<!-- Highlighting: "Matlab" -->
+<body>
+<pre style='color:#1f1c1b;background-color:#ffffff;'>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% GRAFICACIÓN</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% Dos vectores de la misma longitud se pueden representar uno con respecto</span>
+<span style='color:#898887;'>% al otro usando la función plot.</span>
+<span style='color:#898887;'>% plot(x,y)</span>
+<span style='color:#898887;'>% La función plot acepta un argumento adicional que permite especificar el</span>
+<span style='color:#898887;'>% color, el estilo de línea y el estilo de marcador utilizando diferentes</span>
+<span style='color:#898887;'>% símbolos entre comillas simples.</span>
+<span style='color:#898887;'>% plot(x,y,&quot;r--o&quot;)</span>
+<span style='color:#898887;'>% El comando anterior representa una línea roja (r) de guiones (--) con un</span>
+<span style='color:#898887;'>% círculo (o) como marcador.</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% Observe que cada comando plot ha creado una gráfica independiente. Para</span>
+<span style='color:#898887;'>% representar una línea sobre otra, use el comando hold on para mantener la</span>
+<span style='color:#898887;'>% gráfica anterior mientras se agrega otra línea.</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% Funciones seno y coseno en el intervalo[0,2π] con un mínimo de 100 puntos</span>
+<span style='color:#898887;'>% cada una, línea continua, color verde para tangente, grosor 2, marca x; </span>
+<span style='color:#898887;'>% color azul para secante, grosor 2, marca rombo. Graficar sobre el mismo</span>
+<span style='color:#898887;'>% sistema de ejes (ver comando hold on)</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% La función plot acepta entradas adicionales opcionales que consisten en</span>
+<span style='color:#898887;'>% un nombre de propiedad y un valor asociado.</span>
+<span style='color:#898887;'>% plot(y,&quot;LineWidth&quot;,5)</span>
+<span style='color:#898887;'>% El comando anterior representa una línea gruesa.</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#898887;'>% Crear cuadrículas</span>
+<span style='color:#898887;'>% linspace: Generar un vector espaciado linealmente</span>
+<span style='color:#898887;'>% y = linspace(x1,x2) devuelve un vector de fila de 100 puntos</span>
+<span style='color:#898887;'>% equidistantes entre x1 y x2.</span>
+<span style='color:#898887;'>% y = linspace(x1,x2,n) genera n puntos. El espaciado entre los puntos es</span>
+<span style='color:#898887;'>% (x2-x1)/(n-1).</span>
+<span style='color:#898887;'>% linspace es similar al operador de dos puntos, “:”, pero proporciona</span>
+<span style='color:#898887;'>% control directo sobre el número de puntos y siempre incluye los extremos.</span>
+<span style='color:#898887;'>% “lin” en el nombre “linspace” se refiere a generar valores espaciados</span>
+<span style='color:#898887;'>% linealmente</span>
+<span style='color:#898887;'>% Si conoce el número de elementos que desea en un vector (en lugar del</span>
+<span style='color:#898887;'>% espaciado entre cada elemento), podría utilizar en su lugar la función</span>
+<span style='color:#898887;'>% linspace:</span>
+<span style='color:#898887;'>% linspace(primero,último,número_de_elementos).</span>
+<span style='color:#898887;'>% Observe el uso de comas (,) para separar las entradas de la función linspace.</span>
+<span style='color:#898887;'>% x = linspace(0,1,5)</span>
+<span style='color:#898887;'>% -------------------------------------------------------------------------</span>
+<span style='color:#0057ae;'>clear</span>; <span style='color:#0057ae;'>clc</span>;
+<span style='color:#898887;'>% genero un vector espaciado linealmente en el intervalo [0,2π] con 100</span>
+<span style='color:#898887;'>% puntos</span>
+<span style='color:#0057ae;'>x</span> = <span style='color:#0057ae;'>linspace</span>(<span style='color:#b08000;'>0</span>,<span style='color:#b08000;'>2</span>*<span style='color:#0057ae;'>pi</span>,<span style='color:#b08000;'>100</span>);
+<span style='color:#0057ae;'>A</span> = <span style='color:#0057ae;'>sin</span>(<span style='color:#0057ae;'>x</span>);
+<span style='color:#0057ae;'>B</span> = <span style='color:#0057ae;'>cos</span>(<span style='color:#0057ae;'>x</span>);
+<span style='color:#0057ae;'>C</span> = <span style='color:#0057ae;'>tan</span>(<span style='color:#0057ae;'>x</span>);
+<span style='color:#898887;'>% secante</span>
+<span style='color:#0057ae;'>D</span> = <span style='color:#0057ae;'>sec</span>(<span style='color:#0057ae;'>x</span>);
+<span style='color:#898887;'>% creamos la grafica</span>
+<span style='color:#0057ae;'>plot</span>(<span style='color:#0057ae;'>x</span>,<span style='color:#0057ae;'>A</span>,<span style='color:#bf0303;'>&quot;r--o&quot;</span>,<span style='color:#bf0303;'>&quot;LineWidth&quot;</span>,<span style='color:#b08000;'>1</span>)
+<span style='color:#0057ae;'>title</span>(<span style='color:#ff5500;'>'Funciones trigonometricas'</span>)
+<span style='color:#898887;'>% el programa permite etiquetar los ejes</span>
+<span style='color:#0057ae;'>hold</span> <span style='color:#0057ae;'>on</span>
+<span style='color:#0057ae;'>plot</span>(<span style='color:#0057ae;'>x</span>,<span style='color:#0057ae;'>B</span>,<span style='color:#bf0303;'>&quot;b--o&quot;</span>,<span style='color:#bf0303;'>&quot;LineWidth&quot;</span>,<span style='color:#b08000;'>1</span>)
+<span style='color:#0057ae;'>hold</span> <span style='color:#0057ae;'>on</span>
+<span style='color:#0057ae;'>plot</span>(<span style='color:#0057ae;'>x</span>,<span style='color:#0057ae;'>C</span>,<span style='color:#bf0303;'>&quot;g--x&quot;</span>,<span style='color:#bf0303;'>&quot;LineWidth&quot;</span>,<span style='color:#b08000;'>2</span>)
+<span style='color:#0057ae;'>hold</span> <span style='color:#0057ae;'>on</span>
+<span style='color:#0057ae;'>plot</span>(<span style='color:#0057ae;'>x</span>,<span style='color:#0057ae;'>D</span>,<span style='color:#bf0303;'>&quot;b--s&quot;</span>,<span style='color:#bf0303;'>&quot;LineWidth&quot;</span>,<span style='color:#b08000;'>2</span>)
+<span style='color:#0057ae;'>xlabel</span>(<span style='color:#ff5500;'>'Variables independientes (x)'</span>)
+<span style='color:#0057ae;'>ylabel</span>(<span style='color:#ff5500;'>'Variables dependientes (y)'</span>)
+<span style='color:#898887;'>% y agragar titulos</span>
+<span style='color:#898887;'>% title('Azul sec(x), Verde tan(x)')</span>
+<span style='color:#0057ae;'>ylim</span>([-<span style='color:#b08000;'>1</span> <span style='color:#b08000;'>1</span>])
+<span style='color:#0057ae;'>legend</span>(<span style='color:#bf0303;'>&quot;sin(x)&quot;</span>,<span style='color:#bf0303;'>&quot;cos(x)&quot;</span>,<span style='color:#bf0303;'>&quot;tan(x)&quot;</span>,<span style='color:#bf0303;'>&quot;sec(x)&quot;</span>)
+</pre>
+</body>
+</html>
